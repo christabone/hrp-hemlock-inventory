@@ -37,7 +37,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[44.68426472233329,-63.66840237763135],[44.6875599373333,-63.66341691117252]]);
+        }).fitBounds([[44.68355915865094,-63.67055008246665],[44.690149588650954,-63.66057914954898]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -68,8 +68,8 @@
                         <td>' + (feature.properties['diameter'] !== null ? autolinker.link(feature.properties['diameter'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">signs_of_infestation</th>\
-                        <td>' + (feature.properties['signs_of_infestation'] !== null ? autolinker.link(feature.properties['signs_of_infestation'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">signs_of_infection</th>\
+                        <td>' + (feature.properties['signs_of_infection'] !== null ? autolinker.link(feature.properties['signs_of_infection'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">notes</th>\
@@ -275,10 +275,10 @@
             var sel_diameter = document.getElementById('div_diameter');
             noUiSlider.create(sel_diameter, {
                 connect: true,
-                start: [25.65, 82.5],
+                start: [24.12, 88.82],
                 range: {
-                min: 25.65,
-                max: 82.5
+                min: 24.12,
+                max: 88.82
                 }
             });
             sel_diameter.noUiSlider.on('update', function (values) {
