@@ -37,7 +37,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[44.6848055252657,-63.6711102690166],[44.69139595526566,-63.66042601896961]]);
+        }).fitBounds([[44.684419791274536,-63.67087185051953],[44.691010221274496,-63.66018760047254]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -275,9 +275,9 @@
             var sel_diameter = document.getElementById('div_diameter');
             noUiSlider.create(sel_diameter, {
                 connect: true,
-                start: [23.8, 88.82],
+                start: [23.2, 88.82],
                 range: {
-                min: 23.8,
+                min: 23.2,
                 max: 88.82
                 }
             });
